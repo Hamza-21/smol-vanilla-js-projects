@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --colour-neutral: rgb(26, 117, 255);
+  --colour-wrong: rgb(255, 0, 0);
+  --colour-correct: rgb(51, 204, 51);
+}
+
+body {
+  --colour: var(--colour-neutral);
+  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--colour);
+}
+
+body.correct {
+  --colour: var(--colour-correct);
+}
+
+body.wrong {
+  --colour: var(--colour-wrong);
+}
+
+.primary-container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  -webkit-box-shadow: 0 0 10px 2px;
+          box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.btn {
+  font-size: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: var(--colour);
+  border-radius: 5px;
+  padding: 10px 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 2px solid #000000;
+}
+
+.btn.correct {
+  --colour: var(--colour-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --colour: var(--colour-wrong);
+}
+
+.start-btn,
+.next-btn {
+  font-size: 40px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

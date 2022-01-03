@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgb(204, 255, 204), rgb(255, 255, 128));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+//Pseudo element for dot
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  height: 500px;
+  width: 500px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 0, 0, 0.7)
+  );
+  border-radius: 50%;
+  border: 2px solid green;
+  position: relative;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+
+// Just rotating numbers
+
+.clock .number1 {
+  --rotation: 30deg;
+  color: white;
+}
+
+.clock .number2 {
+  --rotation: 60deg;
+  color: white;
+}
+
+.clock .number3 {
+  --rotation: 90deg;
+  color: green;
+}
+
+.clock .number4 {
+  --rotation: 120deg;
+  color: red;
+}
+
+.clock .number5 {
+  --rotation: 150deg;
+  color: red;
+}
+
+.clock .number6 {
+  --rotation: 180deg;
+  color: green;
+}
+
+.clock .number7 {
+  --rotation: 210deg;
+  color: red;
+}
+
+.clock .number8 {
+  --rotation: 240deg;
+  color: red;
+}
+
+.clock .number9 {
+  --rotation: 270deg;
+  color: green;
+}
+
+.clock .number10 {
+  --rotation: 300deg;
+  color: white;
+}
+
+.clock .number11 {
+  --rotation: 330deg;
+  color: white;
+}
+
+.clock .number12 {
+  color: green;
+}
+
+//Clock hands
+
+.clock .hand {
+  --rotation: 0; //specify degree only one place, either here or in multiplication of 1
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  //transition: ease 1s;
+  border-radius: 10px;
+  border: 1px solid limegreen;
+}
+
+.clock .hand.second {
+  height: 42%;
+  width: 2px;
+  background-color: red;
+  border: none;
+}
+
+.clock .hand.minute {
+  height: 35%;
+  width: 7px;
+}
+
+.clock .hand.hour {
+  height: 25%;
+  width: 10px;
+}

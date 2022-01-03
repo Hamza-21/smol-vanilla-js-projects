@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccffcc), to(#ffff80));
+  background-image: linear-gradient(#ccffcc, #ffff80);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.clock {
+  height: 500px;
+  width: 500px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 0, 0, 0.7)));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 0, 0, 0.7));
+  border-radius: 50%;
+  border: 2px solid green;
+  position: relative;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: rotate(var(--rotation));
+          transform: rotate(var(--rotation));
+}
+
+.clock .number1 {
+  --rotation: 30deg;
+  color: white;
+}
+
+.clock .number2 {
+  --rotation: 60deg;
+  color: white;
+}
+
+.clock .number3 {
+  --rotation: 90deg;
+  color: green;
+}
+
+.clock .number4 {
+  --rotation: 120deg;
+  color: red;
+}
+
+.clock .number5 {
+  --rotation: 150deg;
+  color: red;
+}
+
+.clock .number6 {
+  --rotation: 180deg;
+  color: green;
+}
+
+.clock .number7 {
+  --rotation: 210deg;
+  color: red;
+}
+
+.clock .number8 {
+  --rotation: 240deg;
+  color: red;
+}
+
+.clock .number9 {
+  --rotation: 270deg;
+  color: green;
+}
+
+.clock .number10 {
+  --rotation: 300deg;
+  color: white;
+}
+
+.clock .number11 {
+  --rotation: 330deg;
+  color: white;
+}
+
+.clock .number12 {
+  color: green;
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+          transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  border-radius: 10px;
+  border: 1px solid limegreen;
+}
+
+.clock .hand.second {
+  height: 42%;
+  width: 2px;
+  background-color: red;
+  border: none;
+}
+
+.clock .hand.minute {
+  height: 35%;
+  width: 7px;
+}
+
+.clock .hand.hour {
+  height: 25%;
+  width: 10px;
+}
+/*# sourceMappingURL=style.css.map */
