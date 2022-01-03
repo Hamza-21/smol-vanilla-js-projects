@@ -1,2 +1,3 @@
 # smol-vanilla-js-projects
-Includes 4 basic javascript projects to get the gist of it.
+Every single project is based upon a different major and a bunch of minor concepts, or so I think it does.
+API handling, ES6 function notations, arrays, math, string formatting, classes, constructors yadi yada.
